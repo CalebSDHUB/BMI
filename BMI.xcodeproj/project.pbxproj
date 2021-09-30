@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		3C67374C2705D00B00B0FC3E /* BMIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C67374B2705D00B00B0FC3E /* BMIDetailViewController.swift */; };
+		3C6737632705D7BF00B0FC3E /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737522705D6C100B0FC3E /* Poppins-ExtraBold.ttf */; };
+		3C6737642705D7BF00B0FC3E /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737512705D6C100B0FC3E /* Poppins-Bold.ttf */; };
+		3C6737652705D7BF00B0FC3E /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C67374E2705D54A00B0FC3E /* Raleway-Regular.ttf */; };
+		3C6737662705D7BF00B0FC3E /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737562705D7B700B0FC3E /* Raleway-ExtraBold.ttf */; };
+		3C6737672705D7BF00B0FC3E /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737552705D7B700B0FC3E /* Raleway-Bold.ttf */; };
+		3C6737682705D7BF00B0FC3E /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737572705D7B700B0FC3E /* Raleway-SemiBold.ttf */; };
+		3C67376B2705D7BF00B0FC3E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C67374F2705D55B00B0FC3E /* Poppins-Regular.ttf */; };
+		3C67376C2705D7BF00B0FC3E /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737532705D6C100B0FC3E /* Poppins-SemiBold.ttf */; };
 		3CE4509427057DFE000207F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4509327057DFE000207F0 /* AppDelegate.swift */; };
 		3CE4509627057DFE000207F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4509527057DFE000207F0 /* SceneDelegate.swift */; };
 		3CE4509827057DFE000207F0 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4509727057DFE000207F0 /* BMIViewController.swift */; };
 		3CE4509B27057DFE000207F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4509927057DFE000207F0 /* Main.storyboard */; };
 		3CE4509D27057E09000207F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4509C27057E09000207F0 /* Assets.xcassets */; };
 		3CE450A027057E09000207F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4509E27057E09000207F0 /* LaunchScreen.storyboard */; };
-		3CE450CE270588DF000207F0 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE450CA270588DE000207F0 /* Montserrat-SemiBold.ttf */; };
-		3CE450CF270588DF000207F0 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE450CB270588DE000207F0 /* Montserrat-Regular.ttf */; };
-		3CE450D0270588DF000207F0 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE450CC270588DE000207F0 /* Montserrat-Medium.ttf */; };
-		3CE450D1270588DF000207F0 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE450CD270588DF000207F0 /* Montserrat-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C67374B2705D00B00B0FC3E /* BMIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDetailViewController.swift; sourceTree = "<group>"; };
+		3C67374E2705D54A00B0FC3E /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		3C67374F2705D55B00B0FC3E /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		3C6737512705D6C100B0FC3E /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		3C6737522705D6C100B0FC3E /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3C6737532705D6C100B0FC3E /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		3C6737552705D7B700B0FC3E /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		3C6737562705D7B700B0FC3E /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3C6737572705D7B700B0FC3E /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		3CE4509027057DFE000207F0 /* BMI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE4509327057DFE000207F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE4509527057DFE000207F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,10 +42,6 @@
 		3CE4509C27057E09000207F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CE4509F27057E09000207F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CE450A127057E09000207F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CE450CA270588DE000207F0 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
-		3CE450CB270588DE000207F0 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		3CE450CC270588DE000207F0 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		3CE450CD270588DF000207F0 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +130,14 @@
 		3CE450C8270588B8000207F0 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3CE450CD270588DF000207F0 /* Montserrat-Light.ttf */,
-				3CE450CC270588DE000207F0 /* Montserrat-Medium.ttf */,
-				3CE450CB270588DE000207F0 /* Montserrat-Regular.ttf */,
-				3CE450CA270588DE000207F0 /* Montserrat-SemiBold.ttf */,
+				3C67374F2705D55B00B0FC3E /* Poppins-Regular.ttf */,
+				3C6737512705D6C100B0FC3E /* Poppins-Bold.ttf */,
+				3C6737522705D6C100B0FC3E /* Poppins-ExtraBold.ttf */,
+				3C6737532705D6C100B0FC3E /* Poppins-SemiBold.ttf */,
+				3C67374E2705D54A00B0FC3E /* Raleway-Regular.ttf */,
+				3C6737552705D7B700B0FC3E /* Raleway-Bold.ttf */,
+				3C6737562705D7B700B0FC3E /* Raleway-ExtraBold.ttf */,
+				3C6737572705D7B700B0FC3E /* Raleway-SemiBold.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -187,13 +199,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CE450D1270588DF000207F0 /* Montserrat-Light.ttf in Resources */,
+				3C6737682705D7BF00B0FC3E /* Raleway-SemiBold.ttf in Resources */,
+				3C6737632705D7BF00B0FC3E /* Poppins-ExtraBold.ttf in Resources */,
+				3C6737652705D7BF00B0FC3E /* Raleway-Regular.ttf in Resources */,
+				3C67376B2705D7BF00B0FC3E /* Poppins-Regular.ttf in Resources */,
+				3C67376C2705D7BF00B0FC3E /* Poppins-SemiBold.ttf in Resources */,
 				3CE450A027057E09000207F0 /* LaunchScreen.storyboard in Resources */,
+				3C6737642705D7BF00B0FC3E /* Poppins-Bold.ttf in Resources */,
 				3CE4509D27057E09000207F0 /* Assets.xcassets in Resources */,
-				3CE450CE270588DF000207F0 /* Montserrat-SemiBold.ttf in Resources */,
-				3CE450CF270588DF000207F0 /* Montserrat-Regular.ttf in Resources */,
-				3CE450D0270588DF000207F0 /* Montserrat-Medium.ttf in Resources */,
 				3CE4509B27057DFE000207F0 /* Main.storyboard in Resources */,
+				3C6737662705D7BF00B0FC3E /* Raleway-ExtraBold.ttf in Resources */,
+				3C6737672705D7BF00B0FC3E /* Raleway-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
