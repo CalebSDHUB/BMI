@@ -16,12 +16,10 @@ class BMIViewController: UIViewController {
     var weight: Int?
     var height: Int?
     var gender: String?
-    var name: String?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Using the delegate
+        /// Using the delegate
         BMIWheel.dataSource = self
         BMIWheel.delegate = self
         
@@ -37,13 +35,31 @@ class BMIViewController: UIViewController {
         /// Inserting Navigation background image
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "header"), for: .default)
         
-//        let user = User(weight: "234", height: "234", gender: .female)
-//        print(user.gender.rawValue)
+        /// Listening for changed, when textField is used
+        nameField.addTarget(self, action: #selector(formValidation), for: .editingChanged)
+        
+        /// Calculation buttion is disabled from the start.
+        calculateButton.isEnabled = false
+        
+        /// Extract the initial value of the UIPickerView Wheel, without using it.
+        weight = WheelData.weights[BMIWheel.selectedRow(inComponent: 0)]
+        height = WheelData.heights[BMIWheel.selectedRow(inComponent: 1)]
+        gender = WheelData.genders[BMIWheel.selectedRow(inComponent: 2)]
+        
+    }
+    
+    /// Checking that all data is avaiable before continuing.
+    @objc private func formValidation() {
+        guard weight != nil, height != nil, gender != nil, nameField.hasText else {
+            calculateButton.isEnabled = false
+            return
+        }
+        calculateButton.isEnabled = true
     }
 
     /// Calculate the BMI and the CI (Ponderal Index)
     @IBAction func calculateButton(_ sender: UIButton) {
-        print(WheelData.heights.count)
+        
     }
     
 }
@@ -90,6 +106,8 @@ extension BMIViewController: UIPickerViewDelegate {
     /// It listens for each component when they stop, and thereby select them.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+        formValidation()
+        
         switch component {
         case 0:
             weight = WheelData.weights[row]
@@ -100,8 +118,6 @@ extension BMIViewController: UIPickerViewDelegate {
         default:
             print("Error: Loading the components")
         }
-        
-//        nameField.text
     }
 }
 
