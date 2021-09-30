@@ -8,8 +8,7 @@
 struct User {
     let weight: Int
     let height: Int
+    let name: String
     let gender: Gender
-    let bmi: Float
-    let ci: Float
-    let WeightClass: WeightClass
+    let result: Result
 }

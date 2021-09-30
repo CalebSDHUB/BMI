@@ -40,7 +40,6 @@
                                 </state>
                                 <connections>
                                     <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yx-y3-Maa"/>
-                                    <segue destination="hWT-GA-Np2" kind="show" id="uYc-wL-5wx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Personal Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CFo-pH-Z9X">
@@ -97,6 +96,7 @@
                         <outlet property="BMIWheel" destination="96d-92-Uvd" id="iWy-qV-XUq"/>
                         <outlet property="calculateButton" destination="GIL-Qg-L2h" id="Ipp-95-egg"/>
                         <outlet property="nameField" destination="S6B-ju-1hy" id="CyT-cy-pZu"/>
+                        <segue destination="hWT-GA-Np2" kind="show" identifier="formToDetail" id="pIu-k7-tJt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

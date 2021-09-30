@@ -9,6 +9,8 @@ import UIKit
 
 class BMIDetailViewController: UIViewController {
 
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

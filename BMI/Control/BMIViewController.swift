@@ -17,7 +17,7 @@ class BMIViewController: UIViewController {
     var height: Int?
     var gender: String?
     
-    var bmiEngine: BMIEngine?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,9 +61,19 @@ class BMIViewController: UIViewController {
 
     /// Calculate the BMI and the CI (Ponderal Index)
     @IBAction func calculateButton(_ sender: UIButton) {
-        /// We are able to force unwrap the two parameters because, in order to use this calculateButton, the formValidation makes sure that the parameters are instantiated.
-        bmiEngine = BMIEngine(weight!, height!)
-        let result = bmiEngine?.getResult()
+        
+        /// We are able to force unwrap the four parameters because, in order to use this calculateButton function, the formValidation function makes sure that the parameters are instantiated. The fifth parameter (result) needs to be unwrapped safely.
+        guard let result = BMIEngine(weight!, height!).getResult() else { fatalError("Error: The Result object is not instantiated") }
+        user = User(weight: weight!, height: height!, name: nameField.text!, gender: Gender(rawValue: gender!)!, result: result)
+        
+        performSegue(withIdentifier: Constants.BMIViewControllerIdentifier, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.BMIViewControllerIdentifier {
+            let segueDestination = segue.destination as! BMIDetailViewController
+            segueDestination.user = user
+        }
     }
     
 }
@@ -72,7 +82,7 @@ extension BMIViewController: UIPickerViewDataSource {
     
     /// Tell UIPickerView how many numbers of components (wheels) we want.
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return Constants.numberOfpickerComponents
+        return Constants.numberOfPickerComponents
     }
     
     /// Tells UIPickerView how many slots there should be inside each component.
