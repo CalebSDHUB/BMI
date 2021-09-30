@@ -11,4 +11,5 @@ struct User {
     let gender: Gender
     let bmi: Float
     let ci: Float
+    let WeightClass: WeightClass
 }

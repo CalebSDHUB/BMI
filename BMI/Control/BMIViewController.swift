@@ -16,6 +16,9 @@ class BMIViewController: UIViewController {
     var weight: Int?
     var height: Int?
     var gender: String?
+    
+    var bmiEngine: BMIEngine?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +48,6 @@ class BMIViewController: UIViewController {
         weight = WheelData.weights[BMIWheel.selectedRow(inComponent: 0)]
         height = WheelData.heights[BMIWheel.selectedRow(inComponent: 1)]
         gender = WheelData.genders[BMIWheel.selectedRow(inComponent: 2)]
-        
     }
     
     /// Checking that all data is avaiable before continuing.
@@ -59,7 +61,9 @@ class BMIViewController: UIViewController {
 
     /// Calculate the BMI and the CI (Ponderal Index)
     @IBAction func calculateButton(_ sender: UIButton) {
-        
+        /// We are able to force unwrap the two parameters because, in order to use this calculateButton, the formValidation makes sure that the parameters are instantiated.
+        bmiEngine = BMIEngine(weight!, height!)
+        let result = bmiEngine?.getResult()
     }
     
 }
@@ -80,7 +84,7 @@ extension BMIViewController: UIPickerViewDataSource {
         case 1:
             return WheelData.heights.count
         case 2:
-            return 2
+            return WheelData.genders.count
         default:
             return -1
         }
