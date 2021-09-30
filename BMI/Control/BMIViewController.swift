@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BMIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
