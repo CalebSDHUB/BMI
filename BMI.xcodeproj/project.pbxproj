@@ -16,6 +16,10 @@
 		3C6737682705D7BF00B0FC3E /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737572705D7B700B0FC3E /* Raleway-SemiBold.ttf */; };
 		3C67376B2705D7BF00B0FC3E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C67374F2705D55B00B0FC3E /* Poppins-Regular.ttf */; };
 		3C67376C2705D7BF00B0FC3E /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6737532705D6C100B0FC3E /* Poppins-SemiBold.ttf */; };
+		3C6737732705DB5200B0FC3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6737722705DB5200B0FC3E /* Constants.swift */; };
+		3C7C50982705FD7600110A7D /* WheelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C50972705FD7600110A7D /* WheelData.swift */; };
+		3C7C509E2706007900110A7D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C509D2706007900110A7D /* User.swift */; };
+		3C7C50A1270602F400110A7D /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C50A0270602F400110A7D /* Gender.swift */; };
 		3CE4509427057DFE000207F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4509327057DFE000207F0 /* AppDelegate.swift */; };
 		3CE4509627057DFE000207F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4509527057DFE000207F0 /* SceneDelegate.swift */; };
 		3CE4509827057DFE000207F0 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4509727057DFE000207F0 /* BMIViewController.swift */; };
@@ -34,6 +38,10 @@
 		3C6737552705D7B700B0FC3E /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		3C6737562705D7B700B0FC3E /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3C6737572705D7B700B0FC3E /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		3C6737722705DB5200B0FC3E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C7C50972705FD7600110A7D /* WheelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelData.swift; sourceTree = "<group>"; };
+		3C7C509D2706007900110A7D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3C7C50A0270602F400110A7D /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		3CE4509027057DFE000207F0 /* BMI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE4509327057DFE000207F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE4509527057DFE000207F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +97,10 @@
 		3CE450AC27058041000207F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C6737722705DB5200B0FC3E /* Constants.swift */,
+				3C7C50A0270602F400110A7D /* Gender.swift */,
+				3C7C509D2706007900110A7D /* User.swift */,
+				3C7C50972705FD7600110A7D /* WheelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,10 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7C50982705FD7600110A7D /* WheelData.swift in Sources */,
+				3C6737732705DB5200B0FC3E /* Constants.swift in Sources */,
 				3CE4509827057DFE000207F0 /* BMIViewController.swift in Sources */,
 				3CE4509427057DFE000207F0 /* AppDelegate.swift in Sources */,
+				3C7C50A1270602F400110A7D /* Gender.swift in Sources */,
 				3C67374C2705D00B00B0FC3E /* BMIDetailViewController.swift in Sources */,
 				3CE4509627057DFE000207F0 /* SceneDelegate.swift in Sources */,
+				3C7C509E2706007900110A7D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
