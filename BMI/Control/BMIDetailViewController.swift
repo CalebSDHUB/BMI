@@ -19,10 +19,12 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var rateNowButton: UIButton!
-    @IBOutlet weak var starRatingView: CosmosView!
+    @IBOutlet weak var starRatingView: UIView!
     @IBOutlet weak var bannerView: GADBannerView!
 
     var user: User?
+    
+    lazy var cosmosView: CosmosView = CosmosView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,10 +79,15 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
     
     /// Start rating customization.
     private func startRatingHandler() {
-        starRatingView.rating = 0
-        starRatingView.settings.totalStars = 5
-        starRatingView.settings.starSize = 50
-        starRatingView.settings.emptyBorderWidth = 2
+        
+        starRatingView.addSubview(cosmosView)
+        
+        cosmosView.rating = 0
+        cosmosView.settings.totalStars = 5
+        cosmosView.settings.starSize = 50
+        cosmosView.settings.emptyBorderWidth = 2
+        cosmosView.settings.emptyBorderColor = .yellow
+        cosmosView.settings.filledColor = .yellow
     }
     
     /// Some components will hide while a screenshot is captured. Then they will appear again.
@@ -91,7 +98,7 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         shareButton.isHidden = true
         rateButton.isHidden = true
         starRatingView.isHidden = false
-        starRatingView.settings.totalStars = Int(starRatingView.rating)
+        cosmosView.settings.totalStars = Int(cosmosView.rating)
         
         guard let screenshot = view.screenShot() else { return }
         
@@ -100,7 +107,7 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         shareButton.isHidden = false
         rateButton.isHidden = false
         starRatingView.isHidden = true
-        starRatingView.settings.totalStars = 5
+        cosmosView.settings.totalStars = 5
         
         let activityController = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
         present(activityController, animated: true)

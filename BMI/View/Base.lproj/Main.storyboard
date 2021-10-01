@@ -196,31 +196,6 @@
                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90a-ly-eiz" customClass="CosmosView" customModule="Cosmos">
-                                        <rect key="frame" x="45" y="341" width="270" height="69"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
-                                                <color key="value" red="0.99607843137254903" green="0.85882352941176465" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                                <real key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
-                                                <color key="value" red="0.99607843139999996" green="0.85882352939999995" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bW8-bk-fXe">
                                         <rect key="frame" x="37" y="393" width="293" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -233,6 +208,11 @@
                                             <action selector="rateNowButton:" destination="hWT-GA-Np2" eventType="touchUpInside" id="8Vb-pO-gSV"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbE-gW-Nye">
+                                        <rect key="frame" x="37" y="328" width="290" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -251,7 +231,7 @@
                         <outlet property="rateButton" destination="yDa-8R-JBF" id="NVk-5F-Jc9"/>
                         <outlet property="rateNowButton" destination="bW8-bk-fXe" id="dCi-Nk-fVc"/>
                         <outlet property="shareButton" destination="8hL-kd-7qx" id="weA-nI-PoM"/>
-                        <outlet property="starRatingView" destination="90a-ly-eiz" id="WCA-Fh-Jb8"/>
+                        <outlet property="starRatingView" destination="EbE-gW-Nye" id="edB-94-Ysd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhT-bp-nEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -281,11 +261,6 @@
             <point key="canvasLocation" x="140.57971014492756" y="102.45535714285714"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="90a-ly-eiz">
-            <size key="intrinsicContentSize" width="270" height="50"/>
-        </designable>
-    </designables>
     <resources>
         <image name="background" width="752" height="1082"/>
         <image name="double_line_transparent" width="766" height="82"/>
