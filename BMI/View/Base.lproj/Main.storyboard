@@ -77,7 +77,7 @@
                                 <color key="textColor" red="0.23921568627450979" green="0.23921568627450979" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height (cm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tj-4H-4xD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Height (cm)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tj-4H-4xD">
                                 <rect key="frame" x="179" y="338" width="91" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Tj-4H-4xD" secondAttribute="height" multiplier="13:3" id="15Q-2e-m9z"/>
@@ -102,6 +102,7 @@
                             <constraint firstItem="CFo-pH-Z9X" firstAttribute="leading" secondItem="WqH-5Q-M9M" secondAttribute="leading" id="4V3-c5-oZX"/>
                             <constraint firstItem="GIL-Qg-L2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="9b1-Pd-Ia2"/>
                             <constraint firstItem="96d-92-Uvd" firstAttribute="top" secondItem="2Tj-4H-4xD" secondAttribute="bottom" constant="20" id="EW5-s6-skT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CFo-pH-Z9X" secondAttribute="trailing" symbolic="YES" id="Jkx-Hn-FYk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="96d-92-Uvd" secondAttribute="trailing" constant="62" id="L7t-Qg-Rlz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GIL-Qg-L2h" secondAttribute="bottom" constant="149" id="Ld9-Ef-T23"/>
                             <constraint firstItem="nQb-uK-0A9" firstAttribute="top" secondItem="WqH-5Q-M9M" secondAttribute="bottom" constant="33" id="Lxh-y0-K0T"/>

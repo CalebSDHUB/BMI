@@ -30,6 +30,7 @@ class BMIViewController: UIViewController, GADFullScreenContentDelegate {
         /// Using the delegate
         BMIWheel.dataSource = self
         BMIWheel.delegate = self
+        nameField.delegate = self
         
         title = Constants.BMITitle
         
@@ -160,6 +161,15 @@ extension BMIViewController: UIPickerViewDelegate {
         default:
             print("Error: Loading the components or data")
         }
+    }
+}
+
+extension BMIViewController: UITextFieldDelegate {
+    
+    /// Removes the keynboard when "Enter" is pressed.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameField.endEditing(true)
+        return true
     }
 }
 

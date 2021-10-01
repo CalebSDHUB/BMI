@@ -98,7 +98,7 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         shareButton.isHidden = true
         rateButton.isHidden = true
         starRatingView.isHidden = false
-        cosmosView.settings.totalStars = Int(cosmosView.rating)
+        cosmosView.settings.emptyBorderWidth = 0
         
         guard let screenshot = view.screenShot() else { return }
         
@@ -107,7 +107,7 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         shareButton.isHidden = false
         rateButton.isHidden = false
         starRatingView.isHidden = true
-        cosmosView.settings.totalStars = 5
+        cosmosView.settings.emptyBorderWidth = 2
         
         let activityController = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
         present(activityController, animated: true)
