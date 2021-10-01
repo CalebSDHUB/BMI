@@ -184,11 +184,17 @@
                                         <rect key="frame" x="189" y="356" width="117" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="rate_button"/>
+                                        <connections>
+                                            <action selector="rateButton:" destination="hWT-GA-Np2" eventType="touchUpInside" id="SFn-8p-tku"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-kd-7qx">
                                         <rect key="frame" x="57" y="356" width="117" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="share_button"/>
+                                        <connections>
+                                            <action selector="shareButton:" destination="hWT-GA-Np2" eventType="touchUpInside" id="Mvv-LR-w51"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -198,6 +204,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="YGc-I5-KJG"/>
+                    <connections>
+                        <outlet property="BMIRangeLabel" destination="JhJ-7s-qor" id="EnJ-Hf-xwU"/>
+                        <outlet property="CILabel" destination="9B5-AU-uhH" id="HpS-IW-aRn"/>
+                        <outlet property="decimalBMILabel" destination="XP5-uf-PPM" id="aNa-jy-dnb"/>
+                        <outlet property="integerBMILabel" destination="wAp-Ng-0ay" id="9Ya-tj-0YK"/>
+                        <outlet property="messageLabel" destination="RGR-6i-Hcu" id="DKd-eF-man"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhT-bp-nEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
