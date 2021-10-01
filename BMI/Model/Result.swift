@@ -7,8 +7,8 @@
 
 struct Result {
     
-    var bmiValue: Double
+    var bmiValue: Float
     var bmiRangeInfo: String
-    var ciValue: Double
+    var ciValue: Float
     var weightClass: WeightClass
 }

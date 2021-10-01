@@ -21,6 +21,22 @@ class BMIDetailViewController: UIViewController {
         super.viewDidLoad()
         
         title = Constants.BMIDetailTitle
+        displayHandler()
+    }
+    
+    /// Display all the BMI and CI information related to User.
+    private func displayHandler() {
+        
+        guard let user = user else { fatalError("Error: User object is not initialized.") }
+        
+        let formatNumber = String(format: "%.2f", user.result.bmiValue)
+        let seperatedNumber = formatNumber.components(separatedBy: ".")
+        let integerPart = seperatedNumber[0]
+        let decimalPart = seperatedNumber[1]
+        let truncatedDecimalPart = decimalPart[0] + decimalPart[1]
+
+        integerBMILabel.text = integerPart
+        decimalBMILabel.text = truncatedDecimalPart
     }
 
     @IBAction func shareButton(_ sender: UIButton) {

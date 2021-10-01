@@ -62,7 +62,7 @@ class BMIViewController: UIViewController {
     /// Calculate the BMI and the CI (Ponderal Index)
     @IBAction func calculateButton(_ sender: UIButton) {
         
-        /// We are able to force unwrap the four parameters because, in order to use this calculateButton function, the formValidation function makes sure that the parameters are instantiated.
+        /// We are able to force unwrap the four parameters because, in order to use this calculateButton function, the formValidation function makes sure that the parameters are initialized.
         /// The fifth parameter (result) needs to be unwrapped safely.
         guard let result = BMIEngine(weight!, height!).getResult() else { fatalError("Error: The Result object is not instantiated") }
         user = User(weight: weight!, height: height!, name: nameField.text!, gender: Gender(rawValue: gender!)!, result: result)
@@ -131,7 +131,7 @@ extension BMIViewController: UIPickerViewDelegate {
         case 2:
             gender = WheelData.genders[row]
         default:
-            print("Error: Loading the components")
+            print("Error: Loading the components or data")
         }
     }
 }

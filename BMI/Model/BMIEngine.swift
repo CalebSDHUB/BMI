@@ -17,11 +17,11 @@ struct BMIEngine {
     private mutating func compute(_ weight: Int, _ height: Int) {
         
         /// Divide the height by 100 so we get meters, for the right units.
-        let heightMeter = height/100
+        let heightMeter = Float(height)/100
         
         /// Computing the Body Mass Index and the Corpulence index, aka. Ponderal Index
-        let bmiValue = Double(weight) / Double( heightMeter * heightMeter )
-        let ciValue = Double(weight) / Double( heightMeter * heightMeter * heightMeter )
+        let bmiValue = Float(weight) / Float( heightMeter * heightMeter )
+        let ciValue = Float(weight) / Float( heightMeter * heightMeter * heightMeter )
         
         if bmiValue < 16.0 {
             result = Result(bmiValue: bmiValue, bmiRangeInfo: "0kg/m2 - 15.9kg/m2", ciValue: ciValue, weightClass: .underweight)
