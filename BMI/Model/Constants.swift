@@ -11,4 +11,6 @@ struct Constants {
     static let BMIDetailTitle = "BMI Detail"
     static let numberOfPickerComponents = 3
     static let BMIViewControllerIdentifier = "formToDetail"
+    static let genderMale = "male"
+    static let genderFemale = "female"
 }

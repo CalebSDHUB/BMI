@@ -12,16 +12,3 @@ enum WeightClass: String {
     case normal = "Normal"
     case overweight = "Overweight"
 }
-
-enum UnderweightClass {
-    case underweightSevere
-    case underweightModerate
-    case underweightMild
-}
-
-enum OverweightClass {
-    case overweightPreObese
-    case ObeseLevelI
-    case ObeseLevelII
-    case ObeseLevelIII
-}

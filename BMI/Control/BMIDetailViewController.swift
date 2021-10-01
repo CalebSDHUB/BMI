@@ -22,7 +22,6 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var starRatingView: CosmosView!
     @IBOutlet weak var bannerView: GADBannerView!
 
-    
     var user: User?
     
     override func viewDidLoad() {
@@ -43,7 +42,11 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
     /// Display all the BMI and CI information related to User.
     private func displayHandler() {
         
+//        let greeting = ""
+        
         guard let user = user else { fatalError("Error: User object is not initialized.") }
+        
+        let greeting = user.gender.rawValue == Constants.genderMale  ? "MR." : "MRS."
         
         let formatNumber = String(format: "%.2f", user.result.bmiValue)
         let seperatedNumber = formatNumber.components(separatedBy: ".")
@@ -54,7 +57,7 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         integerBMILabel.text = integerPart
         decimalBMILabel.text = truncatedDecimalPart
         
-        messageLabel.text = "HELLO \(user.name.uppercased()), YOU ARE \(user.result.weightClass.rawValue.uppercased())"
+        messageLabel.text = "HELLO \(greeting) \(user.name.uppercased()), YOU ARE \(user.result.weightClass.rawValue.uppercased())"
         BMIRangeLabel.text = "Normal BMI Range: \(user.result.bmiRangeInfo)"
         CILabel.text = "Ponderal Index: \(String(format: "%.2f" , user.result.ciValue))kg/m3"
     }
@@ -79,7 +82,8 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         starRatingView.settings.starSize = 50
         starRatingView.settings.emptyBorderWidth = 2
     }
-
+    
+    /// Some components will hide while a screenshot is captured. Then they will appear again.
     @IBAction func shareButton(_ sender: UIButton) {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -87,6 +91,7 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         shareButton.isHidden = true
         rateButton.isHidden = true
         starRatingView.isHidden = false
+        starRatingView.settings.totalStars = Int(starRatingView.rating)
         
         guard let screenshot = view.screenShot() else { return }
         
@@ -95,10 +100,12 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         shareButton.isHidden = false
         rateButton.isHidden = false
         starRatingView.isHidden = true
+        starRatingView.settings.totalStars = 5
         
         let activityController = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
         present(activityController, animated: true)
     }
+    
     @IBAction func rateButton(_ sender: UIButton) {
         shareButton.isHidden = true
         rateButton.isHidden = true
