@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class BMIDetailViewController: UIViewController {
+class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
 
     @IBOutlet weak var integerBMILabel: UILabel!
     @IBOutlet weak var decimalBMILabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var BMIRangeLabel: UILabel!
     @IBOutlet weak var CILabel: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     var user: User?
     
@@ -21,6 +23,8 @@ class BMIDetailViewController: UIViewController {
         super.viewDidLoad()
         
         title = Constants.BMIDetailTitle
+        
+        bannerHandler()
         displayHandler()
     }
     
@@ -41,6 +45,19 @@ class BMIDetailViewController: UIViewController {
         messageLabel.text = "HELLO \(user.name.uppercased()), YOU ARE \(user.result.weightClass.rawValue.uppercased())"
         BMIRangeLabel.text = "Normal BMI Range: \(user.result.bmiRangeInfo)"
         CILabel.text = "Ponderal Index: \(String(format: "%.2f" , user.result.ciValue))kg/m3"
+    }
+    
+    /// Banner initialization
+    private func bannerHandler() {
+        
+        /// Banner Admob initialization.
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        
+        /// Custom, banner size. The banner image is adjusted to the size of the GADBannerView.
+        bannerView.adSize = GADAdSizeFromCGSize(CGSize(width: bannerView.frame.width, height: bannerView.frame.height))
     }
 
     @IBAction func shareButton(_ sender: UIButton) {

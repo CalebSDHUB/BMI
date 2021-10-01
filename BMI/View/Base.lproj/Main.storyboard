@@ -111,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="emT-Zd-30d">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emT-Zd-30d" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="618" width="414" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -207,6 +207,7 @@
                     <connections>
                         <outlet property="BMIRangeLabel" destination="JhJ-7s-qor" id="EnJ-Hf-xwU"/>
                         <outlet property="CILabel" destination="9B5-AU-uhH" id="HpS-IW-aRn"/>
+                        <outlet property="bannerView" destination="emT-Zd-30d" id="liY-PF-ZT6"/>
                         <outlet property="decimalBMILabel" destination="XP5-uf-PPM" id="aNa-jy-dnb"/>
                         <outlet property="integerBMILabel" destination="wAp-Ng-0ay" id="9Ya-tj-0YK"/>
                         <outlet property="messageLabel" destination="RGR-6i-Hcu" id="DKd-eF-man"/>
@@ -242,7 +243,6 @@
     <resources>
         <image name="background" width="752" height="1082"/>
         <image name="double_line_transparent" width="766" height="82"/>
-        <image name="footer" width="1075" height="278"/>
         <image name="header" width="1078" height="234"/>
         <image name="rate_button" width="282" height="126"/>
         <image name="share_button" width="282" height="125"/>

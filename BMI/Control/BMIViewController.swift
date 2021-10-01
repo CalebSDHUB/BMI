@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class BMIViewController: UIViewController {
+class BMIViewController: UIViewController, GADFullScreenContentDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var BMIWheel: UIPickerView!
     @IBOutlet weak var calculateButton: UIButton!
+    
+    private var interstitial: GADInterstitialAd?
     
     var weight: Int?
     var height: Int?
@@ -21,6 +24,8 @@ class BMIViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        interstitialHandler()
         
         /// Using the delegate
         BMIWheel.dataSource = self
@@ -34,7 +39,7 @@ class BMIViewController: UIViewController {
         /// Remove text from the NavigationItem backButton
         navigationItem.backBarButtonItem = UIBarButtonItem(
             title: "", style: .plain, target: nil, action: nil)
-
+        
         /// Inserting Navigation background image
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "header"), for: .default)
         
@@ -58,7 +63,29 @@ class BMIViewController: UIViewController {
         }
         calculateButton.isEnabled = true
     }
-
+    
+    /// Interstitial initialization
+    private func interstitialHandler() {
+        
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910", request: request, completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
+        })
+    }
+    
+    private func runInterstitial() {
+        if let interstitial = interstitial {
+            interstitial.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
+    
     /// Calculate the BMI and the CI (Ponderal Index)
     @IBAction func calculateButton(_ sender: UIButton) {
         
@@ -66,7 +93,7 @@ class BMIViewController: UIViewController {
         /// The fifth parameter (result) needs to be unwrapped safely.
         guard let result = BMIEngine(weight!, height!).getResult() else { fatalError("Error: The Result object is not instantiated") }
         user = User(weight: weight!, height: height!, name: nameField.text!, gender: Gender(rawValue: gender!)!, result: result)
-        
+        runInterstitial()
         performSegue(withIdentifier: Constants.BMIViewControllerIdentifier, sender: self)
     }
     
