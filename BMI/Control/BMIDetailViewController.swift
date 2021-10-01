@@ -37,6 +37,10 @@ class BMIDetailViewController: UIViewController {
 
         integerBMILabel.text = integerPart
         decimalBMILabel.text = truncatedDecimalPart
+        
+        messageLabel.text = "HELLO \(user.name.uppercased()), YOU ARE \(user.result.weightClass.rawValue.uppercased())"
+        BMIRangeLabel.text = "Normal BMI Range: \(user.result.bmiRangeInfo)"
+        CILabel.text = "Ponderal Index: \(String(format: "%.2f" , user.result.ciValue))kg/m3"
     }
 
     @IBAction func shareButton(_ sender: UIButton) {
