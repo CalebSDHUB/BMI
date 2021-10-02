@@ -30,6 +30,9 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidLoad()
         
         title = Constants.BMIDetailTitle
+        rateNowButton.setTitle("Rate Now", for: .normal)
+        rateNowButton.setTitleColor(.white, for: .normal)
+        rateNowButton.titleLabel?.font = UIFont(name: "Raleway-SemiBold", size: 20)
         
         bannerHandler()
         displayHandler()

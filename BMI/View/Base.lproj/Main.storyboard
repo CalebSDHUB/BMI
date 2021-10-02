@@ -269,7 +269,7 @@
                                     <constraint firstAttribute="width" secondItem="bW8-bk-fXe" secondAttribute="height" multiplier="293:57" id="ygz-io-4TP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
-                                <state key="normal" title="Rate now">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
