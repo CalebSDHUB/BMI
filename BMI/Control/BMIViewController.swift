@@ -27,21 +27,21 @@ class BMIViewController: UIViewController, GADFullScreenContentDelegate {
         
         interstitialHandler()
         
-        /// Using the delegate
+        /// Using the delegate.
         BMIWheel.dataSource = self
         BMIWheel.delegate = self
         nameField.delegate = self
         
         title = Constants.BMITitle
         
-        /// Using white color for the navigation title
+        /// Using white color for the navigation title.
         navigationController?.navigationBar.tintColor = .white
         
-        /// Remove text from the NavigationItem backButton
+        /// Remove text from the NavigationItem backButton.
         navigationItem.backBarButtonItem = UIBarButtonItem(
             title: "", style: .plain, target: nil, action: nil)
         
-        /// Inserting Navigation background image
+        /// Inserting Navigation background image.
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "header"), for: .default)
         
         /// Listening for changed, when textField is used
@@ -65,7 +65,7 @@ class BMIViewController: UIViewController, GADFullScreenContentDelegate {
         calculateButton.isEnabled = true
     }
     
-    /// Interstitial initialization
+    /// Interstitial initialization.
     private func interstitialHandler() {
         
         let request = GADRequest()
@@ -87,7 +87,7 @@ class BMIViewController: UIViewController, GADFullScreenContentDelegate {
         }
     }
     
-    /// Calculate the BMI and the CI (Ponderal Index)
+    /// Calculate the BMI and the CI (Ponderal Index).
     @IBAction func calculateButton(_ sender: UIButton) {
         
         /// We are able to force unwrap the four parameters because, in order to use this calculateButton function, the formValidation function makes sure that the parameters are initialized.

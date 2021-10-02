@@ -68,10 +68,9 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         CILabel.text = "Ponderal Index: \(String(format: "%.2f" , user.result.ciValue))kg/m3"
     }
     
-    /// Banner initialization
+    /// Banner initialization.
     private func bannerHandler() {
         
-        /// Banner Admob initialization.
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
