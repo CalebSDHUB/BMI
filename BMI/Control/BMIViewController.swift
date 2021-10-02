@@ -26,6 +26,11 @@ class BMIViewController: UIViewController, GADFullScreenContentDelegate {
         super.viewDidLoad()
         
         interstitialHandler()
+        UIConfig()
+        extractInitialUIPickerValues()
+    }
+    
+    private func UIConfig() {
         
         /// Using the delegate.
         BMIWheel.dataSource = self
@@ -49,11 +54,6 @@ class BMIViewController: UIViewController, GADFullScreenContentDelegate {
         
         /// Calculation buttion is disabled from the start.
         calculateButton.isEnabled = false
-        
-        /// Extract the initial value of the UIPickerView Wheel, without using it.
-        weight = WheelData.weights[BMIWheel.selectedRow(inComponent: 0)]
-        height = WheelData.heights[BMIWheel.selectedRow(inComponent: 1)]
-        gender = WheelData.genders[BMIWheel.selectedRow(inComponent: 2)]
     }
     
     /// Checking that all data is avaiable before continuing.
@@ -63,6 +63,14 @@ class BMIViewController: UIViewController, GADFullScreenContentDelegate {
             return
         }
         calculateButton.isEnabled = true
+    }
+    
+    /// Extract the initial values of the UIPickerView Wheel, without using it.
+    private func extractInitialUIPickerValues() {
+        
+        weight = WheelData.weights[BMIWheel.selectedRow(inComponent: 0)]
+        height = WheelData.heights[BMIWheel.selectedRow(inComponent: 1)]
+        gender = WheelData.genders[BMIWheel.selectedRow(inComponent: 2)]
     }
     
     /// Interstitial initialization.
