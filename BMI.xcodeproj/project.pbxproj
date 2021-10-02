@@ -109,6 +109,7 @@
 			children = (
 				3CE4509C27057E09000207F0 /* Assets.xcassets */,
 				3CE450A127057E09000207F0 /* Info.plist */,
+				3C7D8B942707230A00F969F5 /* GoogleService-Info.plist */,
 				3CE450C8270588B8000207F0 /* fonts */,
 				3CE450B027058086000207F0 /* Ultility */,
 				3CE450AF27058061000207F0 /* Scene */,
@@ -129,7 +130,6 @@
 				3C7C50972705FD7600110A7D /* WheelData.swift */,
 				3C7C50A7270637BA00110A7D /* BMIEngine.swift */,
 				3C7C50AA27063F7500110A7D /* Result.swift */,
-				3C7D8B942707230A00F969F5 /* GoogleService-Info.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
