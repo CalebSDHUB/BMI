@@ -29,11 +29,7 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = Constants.BMIDetailTitle
-        rateNowButton.setTitle("Rate Now", for: .normal)
-        rateNowButton.setTitleColor(.white, for: .normal)
-        rateNowButton.titleLabel?.font = UIFont(name: "Raleway-SemiBold", size: 20)
-        
+        UIConfig()
         bannerHandler()
         displayHandler()
         startRatingHandler()
@@ -44,10 +40,15 @@ class BMIDetailViewController: UIViewController, GADBannerViewDelegate {
         rateNowButton.isHidden = true
     }
     
+    private func UIConfig() {
+        title = Constants.BMIDetailTitle
+        rateNowButton.setTitle("Rate Now", for: .normal)
+        rateNowButton.setTitleColor(.white, for: .normal)
+        rateNowButton.titleLabel?.font = UIFont(name: "Raleway-SemiBold", size: 20)
+    }
+    
     /// Display all the BMI and CI information related to User.
     private func displayHandler() {
-        
-//        let greeting = ""
         
         guard let user = user else { fatalError("Error: User object is not initialized.") }
         
