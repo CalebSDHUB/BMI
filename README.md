@@ -1,3 +1,7 @@
+# Description
+
+This is a simple app that was used for a iOS job interview.
+
 # Instructions
 
 I have removed the GoogleService-Info.plist from the project as a safety measure.
